@@ -9,7 +9,7 @@ This repository includes:
 - This specific project simulates a small retail inventory system with three product categories:
 - ** Inventory** : Shirts and tops with attributes like color, size, price and availability.
 - ** Jeans** : Various styles of jeans with color, fit, and price.
-- - ** Jewlery** : Accessories with Material, type and price.
+- ** Jewlery** : Accessories with Material, type and price.
  
   - Each category is stored in its own table and a final query combines all products into a unified list sorted by price.
  
