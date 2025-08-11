@@ -1,0 +1,24 @@
+CREATE TABLE inventory (id INTEGER PRIMARY KEY, name TEXT, color INTEGER, size INTEGER, price INTEGER, available TEXT); INSERT INTO inventory (id, name, color, size, price, available)
+VALUES ( 1, 'Ruffle_Shirt', 3, 4, 19.95, "yes"),
+(2, 'Polo Shirt', 1, 40, 2499, 'yes'),
+(3, 'Long Sleeve Tee', 2, 44, 2199, 'no'),
+(4, 'Tank Top', 4, 38, 1799, 'yes'),
+(5, 'Graphic Tee', 3, 41, 2099, 'limited');
+CREATE TABLE jeans (id INTEGER PRIMARY KEY, name TEXT, color TEXT, fit TEXT, price INTEGER); INSERT INTO jeans (id, name, color, fit, price) 
+VALUES (1, "boyfriend", "dark", "flair", 50.25),
+(2, "straight_leg", "light", "curve", 25.68),
+(3, "barel", "stone_wash", "baggy", 400.19),
+(4, "skinny_jeans", "medium", "extra_tight", 10.05),
+(5, "distressed_jeans", "acid", "loose", 20.00);
+CREATE TABLE jewelry (id INTEGER PRIMARY KEY, name TEXT, material TEXT, type TEXT, price REAL); INSERT INTO jewelry (id,name, material, type, price)
+VALUES (1, "Diamond_Stud", "gold", "earrings", 299.99),
+(2, "Silver_Chain", "silver", "Necklace", 89.50),
+(3, "Pearl_Bracelet", "pearl", "Bracelet", 149.75),
+(4, "Emerald_Ring", "Emerald", "Ring", 499.99),
+(5, "Star_Pendant", "Silver", "Necklace", 249.99);
+SELECT name, price, 'inventory' AS category FROM inventory
+UNION ALL
+SELECT name, price, 'jeans' AS category FROM jeans
+UNION ALL
+SELECT name, price, 'jewelry' AS category FROM jewelry
+ORDER BY price ASC
